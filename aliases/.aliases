@@ -1,0 +1,56 @@
+# Brew
+alias bu='brew cleanup && brew update && brew upgrade && brew cleanup && brew doctor'
+alias bo='brew outdated'
+
+# Exa
+alias l='exa'
+alias ll='l -l -h --git --icons'
+alias la='ll -a -h --git --icons'
+
+# Zsh
+alias zc='v $HOME/.zshrc'
+alias za='v $HOME/.aliases'
+alias zs='source $HOME/.zshrc'
+
+# Port
+# yarn global add kill-port
+alias kill='kill-port'
+alias port='sudo lsof -i'
+
+# Git
+alias gaa='git add -A'
+alias gc='git commit -m'
+alias gs='git status'
+alias gp='git push -u'
+alias gw='git worktree'
+alias ghc='gh repo create'
+alias ghcl='gh repo clone'
+alias ghf='gh repo fork'
+
+# Gh Pages
+alias gad="git add dist -f"
+alias gsp="git subtree push --prefix dist origin gh-pages"
+
+# Tmux
+alias t='tmux'
+alias ta="t a -t"
+alias tc="v $HOME/.tmux.conf"
+alias tcs="tmux source $HOME/.tmux.conf"
+
+# NeoVim
+alias v='nvim'
+
+# Cat -> Bat
+alias cat='bat'
+
+# Usefull stuff for presentation and seeing dotfiles
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+alias showall='defaults write com.apple.finder AppleShowAllFiles YES && killall Finder'
+alias hideall='defaults write com.apple.finder AppleShowAllFiles NO && killall Finder'
+
+# Get rid of .DS_Store files recursively
+alias dsclean="find . -type f -name .DS_Store -print0 | xargs -0 rm"
+
+# Flush your dns cache
+alias flush='dscacheutil -flushcache'
