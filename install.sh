@@ -113,8 +113,8 @@ echo "Installing tmux plugin manager..."
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "Installing personal dotfiles..."
-git clone https://github.com/thenameiswiiwin/.dotfiles-2.git ~/.dotfiles
-cd dotfiles
+git clone https://github.com/thenameiswiiwin/dotfiles-2.git ~/.dotfiles
+cd .dotfiles
 
 # Auto Import Rectangle
 #!/bin/bash
