@@ -1,4 +1,4 @@
-font_family      Victor Mono
+font_family      JetBrains Mono
 
 font_size 16.0
 disable_ligatures never
@@ -9,19 +9,16 @@ window_padding_width 10.0
 # background_opacity 0.9
 background_opacity 1.0
 macos_option_as_alt yes
-
-map cmd+plus            change_font_size all +1.0
-map cmd+minus           change_font_size all -1.0
+map cmd+plus            change_font_size all +2.0
+map cmd+minus           change_font_size all -2.0
 map cmd+0               change_font_size all 0
 
 allow_remote_control yes
 
 include symbol-map.conf
 
-enable_audio_bell no
-
 # BEGIN_KITTY_THEME
-# Catppuccin-Frappe
+# Gruvbox Light Hard
 include current-theme.conf
 # END_KITTY_THEME
 

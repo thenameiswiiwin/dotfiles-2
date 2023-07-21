@@ -8,10 +8,17 @@ opt.foldlevel = 20
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
 
-vim.o.cmdheight = 0
+vim.o.cmdheight = 1
 vim.o.showcmdloc = "statusline"
 vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 vim.opt.swapfile = false
+
+vim.g.clipboard = {
+  name = "macOS-clipboard",
+  copy = {["+"] = "pbcopy", ["*"] = "pbcopy"},
+  paste = {["+"] = "pbpaste", ["*"] = "pbpaste"},
+  cache_enabled = false
+}
 
 vim.opt.listchars = {
   space = ".",

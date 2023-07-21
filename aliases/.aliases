@@ -43,6 +43,13 @@ alias v='nvim'
 # Cat -> Bat
 alias cat='bat'
 
+alias cb='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" --pointer="" | xargs git checkout'
+alias yarntest="yarn ui:build && lerna run test && yarn jest && yarn coverage:collect"
+alias weather="curl -4 wttr.in/chattanooga"
+# npm i -g node-notifier-cli
+alias python=/usr/local/bin/python3.9
+
+
 # Usefull stuff for presentation and seeing dotfiles
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"

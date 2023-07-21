@@ -43,8 +43,6 @@ brew install lazygit
 brew install lolcat
 brew install newsboat
 brew install ripgrep
-brew install wget
-
 brew install stow
 brew install taskell
 brew install tmux
@@ -56,6 +54,13 @@ brew install wezterm
 brew install wifi-password
 brew install zellij
 brew install zoxide
+brew install 1password
+brew install rectangle
+brew install nordvpn
+brew install brave-browser
+brew install google-chrome
+brew install spotify
+brew install cleanmymac
 
 # Install zap - this didn't work via script
 # zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
@@ -95,10 +100,6 @@ brew install orbstack
 echo "Brew clean up..."
 brew cleanup
 
-# Powerlevel10k
-brew install romkatv/powerlevel10k/powerlevel10k
-echo 'source $(brew --prefix powerlevel10k)/powerlevel10k.zsh-theme' ~/.zshrc >>!
-
 echo "Installing fonts..."
 brew tap caskroom/fonts
 brew install font-victor-mono
@@ -116,29 +117,9 @@ echo "Installing personal dotfiles..."
 git clone https://github.com/thenameiswiiwin/dotfiles-2.git ~/.dotfiles
 cd .dotfiles
 
-# Auto Import Rectangle
-#!/bin/bash
+# stow alacritty aliases bat bin btop dooit gh git github-copilot hammerspoon keyboard kitty lazygit lf nvim pistol taskell tmux wezterm zellij zsh
 
-# Specify the path to your RectangleConfig.json file
-config_file="/path/to/RectangeConfig.json"
-
-# Check if Rectangle is installed
-if ! command -v rectangle >/dev/null 2>&1; then
-	echo "Rectangle is not installed. Please install Rectangle first."
-	exit 1
-fi
-
-# Check if the configuration file exists
-if [ ! -f "$config_file" ]; then
-	echo "RectangleConfig.json file not found. Please provide the correct path."
-	exit 1
-fi
-
-# Import the configuration
-rectangle config import "$config_file"
-
-echo "Rectangle configuration imported successfully."
-exit 0
+source ~/.zshrc
 
 echo ""
 echo "Done!"
