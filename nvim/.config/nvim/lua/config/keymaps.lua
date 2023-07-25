@@ -21,8 +21,6 @@ vim.keymap.set("n", "H", "^")
 vim.keymap.set("n", "L", "g_")
 vim.keymap.set("v", "H", "^")
 vim.keymap.set("v", "L", "g_")
-vim.keymap.set("n", "J", "5j")
-vim.keymap.set("n", "K", "5k")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
