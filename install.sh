@@ -67,8 +67,8 @@ brew install cleanmymac
 
 echo "Installing node..."
 brew install fnm
-fnm install v16.17
-fnm use v16.17
+fnm install --lts
+fnm use lts-latest
 
 echo "Installing node apps..."
 npm install -g fkill-cli
