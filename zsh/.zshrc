@@ -21,7 +21,7 @@ function runr() {
       --preview-window="down,1,border-horizontal" \
       --height="50%" \
       --layout="reverse" | \
-    xargs -r npm run
+    xargs -o npm run
 }
 
 # https://gist.github.com/reegnz/b9e40993d410b75c2d866441add2cb55
@@ -90,6 +90,6 @@ compinit
 
 # eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(/usr/local/bin/brew shellenv)"
-eval "$(fnm env --use-on-cd)"
+eval "$(fnm env --use-on-cd --log-level=quiet)"
 eval "$(zoxide init zsh)"
 # eval "$(github-copilot-cli alias -- "$0")"

@@ -4,6 +4,7 @@
 
 local opt = vim.opt
 
+opt.relativenumber = true
 opt.foldlevel = 20
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
@@ -32,3 +33,5 @@ vim.opt.listchars = {
 }
 vim.opt.list = true
 
+vim.api.nvim_set_keymap('x', 'gh', ':lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'gh', ':lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })

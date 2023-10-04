@@ -1,11 +1,12 @@
 return {
   {
-    "TimUntersberger/neogit",
+    "NeogitOrg/neogit",
     dependencies = {
       "nvim-lua/plenary.nvim",
       "sindrets/diffview.nvim",
     },
     cmd = "Neogit",
+    branch = "master",
     keys = { { "<leader>gn", "<cmd>Neogit<cr>", desc = "Neogit" } },
     opts = {
       integrations = {
