@@ -57,7 +57,7 @@ alias showall='defaults write com.apple.finder AppleShowAllFiles YES && killall 
 alias hideall='defaults write com.apple.finder AppleShowAllFiles NO && killall Finder'
 
 # Get rid of .DS_Store files recursively
-alias dsclean="find . -type f -name .DS_Store -print0 | xargs -0 rm"
+alias dsclean="sudo find / -name ".DS_Store" -depth -exec rm {} \;"
 
 # Flush your dns cache
 alias flush='dscacheutil -flushcache'
