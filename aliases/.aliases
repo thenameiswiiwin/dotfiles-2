@@ -13,9 +13,8 @@ alias za='v $HOME/.aliases'
 alias zs='source $HOME/.zshrc'
 
 # Port
-# yarn global add kill-port
-alias kill='kill-port'
 alias port='sudo lsof -i'
+alias ps='ps aux | grep'
 
 # Git
 alias gaa='git add -A'

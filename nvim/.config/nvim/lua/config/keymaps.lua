@@ -36,7 +36,7 @@ local lazydocker = Terminal:new({
   close_on_exit = true,
   direction = "float",
   float_opts = {
-  border = "double",
+    border = "double",
   },
 })
 vim.keymap.set("n", "<leader>dd", function()

@@ -66,5 +66,3 @@ vim.api.nvim_create_autocmd({ "RecordingEnter", "RecordingLeave" }, {
     vim.o.cmdheight = match.event == "RecordingEnter" and 1 or 0
   end
 })
-
-

@@ -108,7 +108,7 @@ brew install font-symbols-only-nerd-font
 
 git config --global user.name 'thenameiswiiwin'
 git config --global user.email 'huyn.nguyen95@gmail.com'
-git config --global credential.helper
+git nconfig --global credential.helper
 
 echo "Installing tmux plugin manager..."
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
