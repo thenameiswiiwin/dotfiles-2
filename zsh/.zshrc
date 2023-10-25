@@ -9,7 +9,6 @@ plug "zap-zsh/exa"
 plug "zap-zsh/vim"
 plug "wintermi/zsh-fnm"
 
-
 alias dockerps="docker ps --format 'table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}'"
 
 function runr() { 
@@ -23,6 +22,8 @@ function runr() {
       --layout="reverse" | \
     xargs -o npm run
 }
+
+source ~/.aliases
 
 # https://gist.github.com/reegnz/b9e40993d410b75c2d866441add2cb55
 function jqf() {
@@ -64,7 +65,7 @@ function nvims() {
   fi
   NVIM_APPNAME=$config nvim $@
 }
-bindkey "^b" "nvims\n"
+bindkey -s "^b" "nvims\n"
 
 local dev_commands=(
 	'tz' 'task' 'watson' 'archey' 'ncdu'
@@ -79,7 +80,6 @@ alias dev='printf "%s\n" "${dev_commands[@]}" | fzf --height 20% --header Comman
 bindkey -s "^f" "tmux-sessionizer\n"
 # bindkey -s ^f "zellij-switch\n"
 
-source ~/.aliases
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -r ~/private/.zshrc ] && source ~/private/.zshrc
