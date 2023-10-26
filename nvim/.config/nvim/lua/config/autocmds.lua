@@ -44,7 +44,7 @@ local set_toggle = create_augroup("set_toggle", { clear = true })
 create_autocmd("InsertEnter", {
   callback = function()
     if vim.bo.filetype ~= "alpha" and vim.bo.filetype ~= "NvimTree" and vim.bo.filetype ~= "SidebarNvim" then
-      vim.opt.relativenumber = false
+      vim.opt.relativenumber = true
       vim.opt.list = true
     end
   end,
@@ -66,3 +66,4 @@ vim.api.nvim_create_autocmd({ "RecordingEnter", "RecordingLeave" }, {
     vim.o.cmdheight = match.event == "RecordingEnter" and 1 or 0
   end
 })
+
