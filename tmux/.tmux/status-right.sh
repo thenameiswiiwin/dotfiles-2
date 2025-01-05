@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 # cargo install bkt
 bkt_ttl='15s'
@@ -50,7 +50,7 @@ function battery() {
 		else
 			icon=${chargingMap[${percentage:0:1}]}
 		fi
-	else 
+	else
 		if [[ $percentage == "100%" ]]; then
 			icon=""
 		else
@@ -96,10 +96,6 @@ function spotify() {
 	printf "#[fg=$1]#[fg=$2]#[bg=$1] ♫ #{music_status} #{artist}: #{track} #[bg=$1]"
 }
 
-function twitter() {
-	printf "#[fg=$1]#[fg=$2]#[bg=$1] @elijahmanor #[bg=$1]"
-}
-
 function main() {
 	cpu "$pink" "$dark_gray"
 	battery "$orange" "$dark_gray"
@@ -112,5 +108,3 @@ function main() {
 }
 
 main
-
-

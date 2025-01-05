@@ -17,8 +17,16 @@ vim.keymap.set("n", "<M-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window 
 vim.keymap.set("n", "<M-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window width" })
 vim.keymap.set("n", "<M-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window width" })
 
-vim.keymap.set("v", "jl", ":join<cr>")
+vim.keymap.set("n", "H", "^")
+vim.keymap.set("n", "L", "g_")
+vim.keymap.set("v", "H", "^")
+vim.keymap.set("v", "L", "g_")
 
+vim.keymap.set('n', 'qn', ':bprevious<CR>', { noremap = true, silent = true })  -- Previous buffer
+vim.keymap.set('n', 'wn', ':bnext<CR>', { noremap = true, silent = true })  -- Next buffer
+
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("n", "<leader>ch", ":!chmod +x %<cr>")
 
 local Terminal = require("toggleterm.terminal").Terminal

@@ -8,6 +8,6 @@ export GIT_EDITOR='nvim'
 export VISUAL='nvim'
 export EDITOR='nvim'
 
-export TERM=xterm-256color
+export TERM="xterm-256color"
 
 . "$HOME/.cargo/env"

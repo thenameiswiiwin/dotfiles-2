@@ -1,8 +1,7 @@
 # Brew
 alias bu='brew cleanup && brew update && brew upgrade && brew cleanup && brew doctor'
 alias bo='brew outdated'
-
-# Exa
+# Eza
 alias l='exa'
 alias ll='l -l -h --git --icons'
 alias la='ll -a -h --git --icons'

@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 white='#f8f8f2'
 gray='#44475a'
@@ -25,17 +25,4 @@ function basicline() {
 	printf "#[fg=%s]#[bg=%s] | %s" $1 $2 "${3}"
 }
 
-function twitter() {
-	# local username = "@elijahmanor"
-	# segment $1 $2 "${username}"
-	printf "#[fg=$1]#[fg=$2]#[bg=$1] @elijahmanor #[bg=$1]"
-}
-
-function main() {
-	twitter "$cyan" "$dark_gray"
-	printf " "
-}
-
 main
-
-
